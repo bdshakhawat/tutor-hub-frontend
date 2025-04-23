@@ -2,22 +2,22 @@
 import { IMeta, IService } from "@/types";
 import { baseApi } from "./baseApi";
 
-const SERVICE = "/services";
+const SERVICE = "/subjects";
 
 export const serviceApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getSingleService: build.query({
       query: (id: string) => ({
-        url: `${SERVICE}/${id}`,
+        url: `${SERVICE}/single-subject/${id}`,
         method: "GET",
       }),
-      providesTags: ["service", "reviews"],
+      providesTags: ["subject", "reviews"],
     }),
 
     getServices: build.query({
       query: (arg: Record<string, any>) => {
         return {
-          url: SERVICE,
+          url: `${SERVICE}/allsubjects`,
           method: "GET",
           params: arg,
         };
@@ -28,7 +28,7 @@ export const serviceApi = baseApi.injectEndpoints({
           meta,
         };
       },
-      providesTags: ["service", "reviews"],
+      providesTags: ["subject", "reviews"],
     }),
 
     createService: build.mutation({

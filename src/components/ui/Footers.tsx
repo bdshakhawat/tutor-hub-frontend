@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid lg:grid-cols-5 grid-cols-2  gap-3">
           <div className="col-span-2">
             <h1 className="text-3xl mb-4 text-cOrange font-bold">
-              Elite Educators
+              Tutors Hub
             </h1>
             <p className="text-gray-400 md:w-[80%] w-full">
               We are dedicated to help those students who are really interested to learn something new. We are providing the best quality of education to our students. Tutors are very friendly and helpful. We are always ready to help our students.
@@ -24,10 +24,10 @@ const Footer = () => {
                 <Link href='/home'>Home</Link>
               </li>
               <li>
-                <Link href='/'>About</Link>
+                <Link href='/about'>About</Link>
               </li>
               <li>
-                <Link href='/'>Contact</Link>
+                <Link href='/contact'>Contact</Link>
               </li>
             </ul>
           </div>
@@ -38,7 +38,7 @@ const Footer = () => {
                 <Link href='/services'>Services</Link>
               </li>
               <li>
-                <Link href='/'>Blog</Link>
+                <Link href='/blog'>Blog</Link>
               </li>
               <li>
                 <Link href='/events'>Events</Link>
@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="mt-5 flex items-center justify-between text-gray-300 text-sm">
           <div className="flex items-center ">
             <p>
-              © Khalid Hasan {new Date().getFullYear()} | All right reserved.
+              © Shakhawat Hossain {new Date().getFullYear()} | All right reserved.
             </p>
           </div>
           <div>
