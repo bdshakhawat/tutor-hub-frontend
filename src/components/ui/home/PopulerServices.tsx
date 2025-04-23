@@ -17,10 +17,10 @@ const PopulerServices = () => {
 
   if (isLoading) return <HashLoading />;
   const services = data?.services;
-  // console.log(services);
+  console.log(services);
 
   const populerServices = services?.filter((service: any) => service.isPopular);
-  // console.log(populerServices);
+  console.log(populerServices);
 
 
   return (

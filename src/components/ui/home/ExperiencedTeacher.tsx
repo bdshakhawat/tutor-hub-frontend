@@ -7,7 +7,7 @@ import { BiSolidRightArrow } from "react-icons/bi";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import userImage from "../../../assets/Untitled design1.png";
+import userImage from "../../../assets/teacher.jpg";
 import Button from "../Button";
 import SectionTitle from "../SectionTitle";
 import BeTutorModal from "../BeTutorModal";
@@ -22,8 +22,8 @@ const ExperiencedTeacher = () => {
   }, []);
 
   const teachers = Array(9).fill({
-    name: "Khalid Hasan",
-    subject: "Chemistry",
+    name: "Shakhawat Hossain",
+    subject: "Physics",
     image: userImage,
   });
 
@@ -39,7 +39,7 @@ const ExperiencedTeacher = () => {
   return (
     <div className="md:py-20 py-10 px-5 md:px-16">
       <SectionTitle
-        title="Our Experienced Teachers"
+        title="Find Experienced Teachers Fast"
         subtitle="The best teachers from all over the country are here to help you."
       />
 
