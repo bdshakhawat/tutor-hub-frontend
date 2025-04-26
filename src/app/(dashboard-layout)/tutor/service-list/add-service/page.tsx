@@ -92,7 +92,7 @@ const AddService = () => {
         // console.log(res);
         if (res) {
           toast.success("Course added successfully !");
-          router.push("/service-list");
+          router.push("/tutor/service-list");
           reset();
         }
       } catch (error) {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import teacherimg from "../../assets/Untitled design1.png";
+import teacherimg from "../../assets/teacher.jpg";
 
 const TutorCard = () => {
   return (
@@ -18,8 +18,8 @@ const TutorCard = () => {
       />
       <div className="px-2 py-3 flex justify-between ">
         <div>
-          <h1 className="text-lg font-semibold text-cBlack">Sakib</h1>
-          <p className="text-sm">Chemistry</p>
+          <h1 className="text-lg font-semibold text-cBlack">Shakhawat</h1>
+          <p className="text-sm">Physics</p>
         </div>
         <button className="btn btn-xs bg-cDeepBlue/80 text-white text-[10px] hover:bg-cOrange">
           View Profile

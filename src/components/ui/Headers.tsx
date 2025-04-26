@@ -84,6 +84,14 @@ const Headers = () => {
     }
   };
 
+   const dashboardUrl =
+    role === "user"
+      ? "/student/dashboard"
+      : role === "tutor"
+      ? "/tutor/dashboard"
+      : "/";
+
+
   return (
     <>
       <div className="flex items-center justify-between px-5 bg-[#FFFFFF]">
@@ -107,11 +115,14 @@ const Headers = () => {
           {/* <CustomLink href="/events" title="Events" className="" /> */}
           {userLoggedIn ? (
             <>
-              <CustomLink href="/dashboard" title="Dashboard" className="" />
+              <CustomLink href={dashboardUrl} title="Dashboard" className="" />
             </>
           ) : (
             <>
-              <CustomLink href="/signin" title="Signin" className="" />
+              <CustomLink
+              href={`/signin?redirectTo=${dashboardUrl}`}
+              title="Signin"
+            />
             </>
           )}
         </div>

@@ -37,19 +37,19 @@ const Sidebar = () => {
       {/* ----------------main part------------- */}
       <div className="text-gray-200 mt-5">
         <Link
-          href="/dashboard"
+          href="/student/dashboard"
           className="flex items-center  gap-3 hover:bg-gray-800 py-2 pl-2 rounded-lg"
         >
           {isShrunk ? (
             <BsBox className="text-2xl" />
           ) : (
             <>
-              <h1 className={`font-bold text-2xl`}>Elite Educators</h1>
+              <h1 className={`font-bold text-3xl`}>Tutors Hub</h1>
             </>
           )}
         </Link>
         <Link
-          href="/profile"
+          href="/student/profile"
           className="flex items-center  gap-3 hover:bg-gray-800 py-2 pl-2 rounded-lg"
         >
           {isShrunk ? (
@@ -62,11 +62,11 @@ const Sidebar = () => {
           )}
         </Link>
 
-        {(loggedUser?.role === "admin" ||
-          loggedUser?.role === "super_admin") && (
+        {(loggedUser?.role === "tutor" ||
+          loggedUser?.role === "admin") && (
           <>
             <Link
-              href="/service-list"
+              href="/student/service-list"
               className="flex items-center  gap-3 hover:bg-gray-800 py-2 pl-2 rounded-lg"
             >
               {isShrunk ? (
@@ -79,7 +79,7 @@ const Sidebar = () => {
               )}
             </Link>
             <Link
-              href="/users"
+              href="/student/users"
               className="flex items-center  gap-3 hover:bg-gray-800 py-2 pl-2 rounded-lg"
             >
               {isShrunk ? (
@@ -94,7 +94,7 @@ const Sidebar = () => {
           </>
         )}
         <Link
-          href="/bookings"
+          href="/student/bookings"
           className="flex items-center  gap-3 hover:bg-gray-800 py-2 pl-2 rounded-lg"
         >
           {isShrunk ? (

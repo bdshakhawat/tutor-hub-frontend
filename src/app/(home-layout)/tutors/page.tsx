@@ -55,6 +55,12 @@ const TutorsPage = () => {
         <TutorCard />
         <TutorCard />
         <TutorCard />
+        <TutorCard />
+        <TutorCard />
+        <TutorCard /> 
+        <TutorCard />
+        <TutorCard />
+        <TutorCard />
       </div>
       {/* pagination */}
       <div className="flex items-center justify-center my-5">

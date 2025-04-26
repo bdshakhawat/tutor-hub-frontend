@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 
 const ProfileUpdate = () => {
     const loggedUser: any = getUserInfo();
+    console.log(loggedUser);
     const router = useRouter();
 
     const {
@@ -21,6 +22,7 @@ const ProfileUpdate = () => {
     } = useForm();
 
     const { data, isLoading } = useGetSingleUserQuery(loggedUser?.id);
+    console.log(data);
     const [updateUser] = useUpdateUserMutation();
 
     const onSubmit = async (userData: any) => {
@@ -29,7 +31,7 @@ const ProfileUpdate = () => {
         
         if (res) {
           toast.success("Course updated successfully !");
-          router.push("/profile");
+          router.push("/tutor/profile");
           reset();
         }
     }

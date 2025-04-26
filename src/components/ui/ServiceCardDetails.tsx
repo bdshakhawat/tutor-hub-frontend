@@ -5,6 +5,7 @@ import { useGetReviewsByCourseIdQuery } from "@/redux/api/reviewsApi";
 import { useGetSingleServiceQuery } from "@/redux/api/serviceApi";
 import BookingModal from "./BookingModal";
 import HashLoading from "./HashLoading";
+import userImage from "../../assets/teacher.jpg";
 import ServiceReview from "./ServiceReview";
 import { BsStar, BsStarFill } from "react-icons/bs";
 import Image from "next/image";
@@ -51,7 +52,7 @@ const ServiceCardDetails = ({ id }: any) => {
       <div className="flex md:flex-row flex-col justify-between items-start gap-10">
         <div className="flex flex-col gap-5 lg:basis-1/4 md:basis-[40%] basis-1">
           <Image
-            src={image}
+            src={ userImage}
             alt="service image"
             width={750}
             height={850}

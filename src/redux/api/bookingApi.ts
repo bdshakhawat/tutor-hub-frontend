@@ -26,7 +26,7 @@ export const bookingApi = baseApi.injectEndpoints({
     getBookingByUserId: build.query({
       query: ({ id, arg }) => {
         return {
-          url: `${URL}/user/${id}`,
+          url: `${URL}/${id}`,
           method: "GET",
           params: arg,
         };
