@@ -16,7 +16,7 @@ import BreadCrumb from "../BreadCrumb";
 const BookingList = () => {
   const loggedUser: any = getUserInfo();
   const { id, role } = loggedUser;
-  // console.log(role);
+  console.log(id);
 
   const query: Record<string, any> = {};
 
@@ -35,11 +35,12 @@ const BookingList = () => {
     id,
     ...query,
   });
+  console.log(dataByUserId);
   const { data: allData } = useGetAllBookingsQuery({ ...query });
   const [deleteBooking] = useDeleteBookingMutation();
   const [bookingStatusChange] = useBookingStatusChangeMutation();
 
-  const bookings = dataByUserId?.services;
+  const bookings = dataByUserId?.data;
   const meta = dataByUserId?.meta;
 
   const allBookings = allData?.bookings;
