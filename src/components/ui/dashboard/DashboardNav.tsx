@@ -13,7 +13,7 @@ const DashboardNav = () => {
     <>
       <div className="h-16 bg-cDeepBlue flex items-center justify-between px-5 md:hidden">
         <h1 className="text-white text-2xl font-semibold uppercase">
-          Elite Educators
+          Tutors Hub
         </h1>
         <label htmlFor="my-drawer" className="drawer-button">
           <GiHamburgerMenu className="text-white text-xl" />

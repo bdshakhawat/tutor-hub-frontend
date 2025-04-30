@@ -16,7 +16,7 @@ import BreadCrumb from "../BreadCrumb";
 const BookingList = () => {
   const loggedUser: any = getUserInfo();
   const { id, role } = loggedUser;
-  // console.log(role);
+  console.log(id);
 
   const query: Record<string, any> = {};
 
@@ -35,11 +35,12 @@ const BookingList = () => {
     id,
     ...query,
   });
+  console.log(dataByUserId);
   const { data: allData } = useGetAllBookingsQuery({ ...query });
   const [deleteBooking] = useDeleteBookingMutation();
   const [bookingStatusChange] = useBookingStatusChangeMutation();
 
-  const bookings = dataByUserId?.services;
+  const bookings = dataByUserId?.data;
   const meta = dataByUserId?.meta;
 
   const allBookings = allData?.bookings;
@@ -81,14 +82,14 @@ const BookingList = () => {
           <thead className="bg-cBlue text-gray-100 lg:text-base">
             <tr>
               <th>Serial</th>
-              {loggedUser?.role === "admin" && <th>User</th>}
+              {loggedUser?.role === "tutor" && <th>User</th>}
               <th>Subject</th>
               <th>Start Date</th>
               <th>End Date</th>
               <th>Amount/Week</th>
               <th>Days/Week</th>
               <th>Status</th>
-              {(role === "admin" || role === "super_admin") && <th>Accept</th>}
+              {(role === "tutor" || role === "admin") && <th>Accept</th>}
               <th>Cancel</th>
             </tr>
           </thead>
@@ -112,7 +113,7 @@ const BookingList = () => {
                       <span className="text-cOrange">Pending</span>
                     )}
                   </td>
-                  {(role === "admin" || role === "super_admin") && (
+                  {(role === "tutor" || role === "admin") && (
                     <td>
                       <button
                         onClick={() => handleStatusChange(booking?._id)}

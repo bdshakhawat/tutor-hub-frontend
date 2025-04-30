@@ -4,11 +4,14 @@ import HashLoading from "@/components/ui/HashLoading";
 import { useGetSingleUserQuery } from "@/redux/api/authApi";
 import { getUserInfo } from "@/services/auth.service";
 import Image from "next/image";
+import newImage from "../../../assets/teacher.jpg"
 
 const ProfileDetails = () => {
   const loggedUser: any = getUserInfo();
+  console.log(loggedUser);
 
   const { data, isLoading } = useGetSingleUserQuery(loggedUser?.id);
+  console.log(data);
 
   if (isLoading) {
     return <HashLoading />;
@@ -23,7 +26,7 @@ const ProfileDetails = () => {
           {data?.name}
         </h1>
         <Image
-          src={data?.profileImgUrl || "/images/Lesson-bro.png"}
+          src={newImage}
           alt="profile"
           width={200}
           height={200}

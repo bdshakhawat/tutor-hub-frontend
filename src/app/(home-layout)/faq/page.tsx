@@ -40,40 +40,40 @@ const faqData: FaqData = {
   Tutoring: [
     {
       id: "tutoring-1",
-      question: "How do I find a tutor?",
+      question: "How can I find a tutor?",
       answer:
-        "You can browse our tutor directory and filter based on subject, availability, and ratings.",
+        "You can browse our tutors page and filter based on subject, availability, and name.",
     },
     {
       id: "tutoring-2",
-      question: "Can I cancel a session?",
+      question: "Can I cancel any session at any time?",
       answer:
-        "Yes, you can cancel a session 24 hours before the scheduled time without a penalty.",
+        "Yes, you can cancel a session 24 hours before the scheduled time without any penalty.",
     },
     {
       id: "tutoring-3",
-      question: "What if I’m not satisfied with my tutor?",
+      question: "What if I am not satisfied with my tutor?",
       answer:
-        "We offer a tutor replacement policy if you’re not satisfied with your session.",
+        "We can offer a new tutor for the session if you are not satisfied with your session.",
     },
   ],
   Payments: [
     {
       id: "payments-1",
-      question: "How are payments processed?",
+      question: "What payment methods do you accept?",
       answer: "Payments are securely processed through Stripe and PayPal.",
     },
     {
       id: "payments-2",
-      question: "Can I get a refund?",
+      question: "Can I get a refund if i am not satisfied with the service or cancel session?",
       answer:
         "Refunds are available if you cancel within our refund policy timeframe.",
     },
   ],
-  "Account Management": [
+  "Profile Management": [
     {
       id: "account-1",
-      question: "How do I reset my password?",
+      question: "How can I reset my password?",
       answer:
         "Go to settings and click on 'Forgot Password' to receive a reset link.",
     },
@@ -131,8 +131,8 @@ const Faq = () => {
                 Don’t find your answer!
               </h2>
               <p className="text-[#6E7485] text-sm w-full mt-2 mb-6">
-                Don’t worry, write your question here and our supsport team will
-                help you.
+                Please write your aditional question here and our supsport team will
+                contact you as soon as possible.
               </p>
               <input
                 type="text"

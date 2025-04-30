@@ -14,6 +14,8 @@ const PopulerServices = () => {
   query["sortOrder"] = 'desc';
 
   const { data, isLoading } = useGetServicesQuery({ ...query });
+  // see all service data in array format in the browser console 
+  //  console.log(data);
 
   if (isLoading) return <HashLoading />;
   const services = data?.services;

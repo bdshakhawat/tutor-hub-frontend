@@ -8,7 +8,7 @@ const DashBoard = () => {
     <div className="min-h-screen">
       <div className="mb-5">
         <h1 className="md:text-3xl text-2xl uppercase text-center font-bold">
-          Welcome to your personalized Dashboard
+          Welcome to Student Dashboard
         </h1>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-12 px-16">
